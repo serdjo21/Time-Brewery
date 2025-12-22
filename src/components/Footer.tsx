@@ -15,7 +15,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-foam/60">
-              Fokus na kvalitet, konzistentnost i ukus. Ako oćeš premium doživljaj bez glume — tu smo.
+              Quality craft beers and brewery. 
             </p>
           </div>
 
@@ -53,7 +53,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Time Brewery. Sva prava zadržana.
           </div>
           <div className="text-xs text-foam/45">
-            Made with ukus, ne sa šablonom.
+           
           </div>
         </div>
       </div>

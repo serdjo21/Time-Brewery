@@ -20,12 +20,12 @@ type Props = {
 
 export default function IdentitySection({
   id = "identitet",
-  kicker = "CRAFT PIVARA",
-  title = "Pravimo pivo bez kompromisa.",
-  copy = "Male serije, čisti stilovi i ozbiljan ukus. Ako nije dobro — ne izlazi.",
-  points = ["Male serije. Velika kontrola.", "Sastojci zbog ukusa.", "Pivo sa karakterom."],
+  kicker = "CRAFT BEER",
+  title = "We brew for the bold.",
+  copy = "Slovenian number one craft brewery, made for those who dare to be different. Our beers are crafted with passion, precision, and a touch of rebellion.",
+  points = ["quality in taste", "Ingredients of choice", "Beer with character"],
   ctaHref = "/pivara",
-  ctaLabel = "Pogledaj pivaru",
+  ctaLabel = "Visit our brewery",
   imageSrc,
   imageAlt = "Pivara",
 }: Props) {
@@ -153,7 +153,7 @@ export default function IdentitySection({
               </Link>
 
               <p className="mt-3 text-xs text-white/45">
-                Pivo prvo mora bit dobro nama. Tek onda ide drugima.
+                Double checked for ultimate quality.
               </p>
             </div>
           </div>
@@ -179,9 +179,9 @@ export default function IdentitySection({
 
               <div className="flex items-center justify-between gap-4 border-t border-white/10 bg-black px-5 py-4">
                 <p className="text-xs tracking-[0.22em] text-white/45">
-                  SMALL BATCH / CLEAN STYLE
+                  OUR PRODUCTS
                 </p>
-                <p className="text-xs text-white/55">Iz pivare direktno u čašu.</p>
+                <p className="text-xs text-white/55">From brewery into thhe glass</p>
               </div>
             </div>
           </div>

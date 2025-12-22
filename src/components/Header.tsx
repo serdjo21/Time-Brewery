@@ -10,10 +10,10 @@ type Item = { label: string; href: string; desc?: string };
 export default function Header() {
   const beers: Item[] = useMemo(
     () => [
-      { label: "3 o’clock", href: "/piva/3-oclock", desc: "Lager · 4.9%" },
-      { label: "5 o’clock", href: "/piva/5-oclock", desc: "Fresh · Clean" },
-      { label: "8 o’clock", href: "/piva/8-oclock", desc: "Bold · Smooth" },
-      { label: "10 o’clock", href: "/piva/10-oclock", desc: "Late · Strong" },
+      { label: "3 o’clock", href: "/piva/3-oclock" },
+      { label: "5 o’clock", href: "/piva/5-oclock" },
+      { label: "8 o’clock", href: "/piva/8-oclock" },
+      { label: "10 o’clock", href: "/piva/10-oclock" },
     ],
     []
   );
@@ -42,7 +42,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close dropdowns on outside click / escape
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -67,7 +66,6 @@ export default function Header() {
     return () => window.removeEventListener("mousedown", onClick);
   }, []);
 
-  // GSAP mobile timeline
   useEffect(() => {
     if (!panelRef.current) return;
 
@@ -93,7 +91,6 @@ export default function Header() {
 
     tlRef.current = tl;
 
-    // initial hidden
     gsap.set(panelRef.current, { display: "none", opacity: 0 });
 
     return () => {
@@ -107,7 +104,7 @@ export default function Header() {
     if (!tl) return;
     if (mobileOpen) tl.play(0);
     else {
-      // reverse + hide at end
+
       tl.reverse();
       tl.eventCallback("onReverseComplete", () => {
         if (panelRef.current) gsap.set(panelRef.current, { display: "none" });

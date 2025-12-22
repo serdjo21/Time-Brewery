@@ -9,9 +9,9 @@ export default function HomePage() {
       <Header />
       <Hero />
       <AboutBrewerySection
-        imageSrc="/hero/beers.png" // stavi tvoju fotku u public/images/brewery/
+        imageSrc="/hero/beers.png"
       />
-      {/* ovđe śutra ubacujemo sekcije: Our Beers / Story / Taproom / CTA */}
+      
       <Footer />
     </main>
   );
