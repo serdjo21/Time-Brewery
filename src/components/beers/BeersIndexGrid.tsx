@@ -60,7 +60,7 @@ export default function BeersIndexGrid() {
           {beers.map((b) => (
             <Link
               key={b.key}
-              href={`/beers/${b.key}`}
+              href={`/piva/${b.key}`}
               data-anim="card"
               className="group border border-white/10 bg-black/35 hover:bg-white/5 transition"
             >
