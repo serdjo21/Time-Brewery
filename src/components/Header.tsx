@@ -147,7 +147,6 @@ export default function Header() {
     { label: "Piva", href: "/piva" },
     { label: "Pivovarna", href: "/pivovarna" },
     { label: "Pivnica", href: "/pivnica" },
-    { label: "O nama", href: "/o-nama" },
     { label: "Kontakt", href: "/kontakt" },
   ].map((item) => (
     <Link
@@ -236,7 +235,6 @@ export default function Header() {
     { label: "Piva", href: "/piva" },
     { label: "Pivovarna", href: "/pivovarna" },
     { label: "Pivnica", href: "/pivnica" },
-    { label: "O nama", href: "/o-nama" },
     { label: "Kontakt", href: "/kontakt" },
   ].map((item) => (
     <Link
@@ -256,15 +254,6 @@ export default function Header() {
 
             {/* Right column */}
             <div className="lg:col-span-6 space-y-4">
-              <Link
-                href="/o-nama"
-                onClick={closeAll}
-                className="m-item group flex items-center justify-between rounded-md border border-white/10 px-4 py-4 hover:bg-white/5 transition"
-              >
-                <div className="text-lg font-semibold text-white/85 group-hover:text-white">O nama</div>
-                <span className="text-white/40 group-hover:text-white/80 transition">→</span>
-              </Link>
-
               <Link
                 href="/kontakt"
                 onClick={closeAll}
