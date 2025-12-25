@@ -50,10 +50,10 @@ export default function BeersIndexGrid() {
           BEERS
         </p>
         <h1 data-anim="a" className="mt-4 text-balance text-5xl font-semibold tracking-[-0.04em] md:text-6xl">
-          Naša piva.
+          Our beer selection.
         </h1>
         <p data-anim="a" className="mt-5 max-w-prose text-base text-white/70 md:text-lg">
-          Pet etiketa. Pet profila. Sve čisto, bez šuma.
+          Five signature brews, each with its own character and story.
         </p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -89,7 +89,7 @@ export default function BeersIndexGrid() {
             href="https://shop.time-brewery.com"
             className="inline-flex items-center gap-3 rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-black hover:opacity-90 transition"
           >
-            Otvori Shop <span>→</span>
+                Open store <span>→</span>
           </a>
         </div>
       </div>

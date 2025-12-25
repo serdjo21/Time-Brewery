@@ -46,10 +46,10 @@ export default function BeerShopSection({ beer }: { beer: Beer }) {
               SHOP
             </p>
             <h3 data-anim="a" className="mt-3 text-3xl font-semibold tracking-[-0.03em] md:text-4xl">
-              {beer.title} u shop-u.
+              {beer.title} in store.
             </h3>
             <p data-anim="a" className="mt-3 max-w-prose text-base text-white/70">
-              Ako je dostupno — naći ćeš ga odmah. Ako nije, biće opet kad batch izađe.
+              check availability and order online.
             </p>
           </div>
 
@@ -59,7 +59,7 @@ export default function BeerShopSection({ beer }: { beer: Beer }) {
               href="https://shop.time-brewery.com"
               className="w-full inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-black hover:opacity-90 transition"
             >
-              Otvori Shop
+              Open store
             </a>
             <p data-anim="a" className="mt-3 text-xs text-white/45">
               shop.time-brewery.com

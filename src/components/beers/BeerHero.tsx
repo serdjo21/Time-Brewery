@@ -101,7 +101,7 @@ export default function BeerHero({ beer }: { beer: Beer }) {
                 href="https://shop.time-brewery.com"
                 className="rounded-2xl bg-white px-6 py-3 text-sm font-semibold text-black hover:opacity-90 transition"
               >
-                Kupi u Shop-u
+                Buy in store
               </a>
             </div>
 

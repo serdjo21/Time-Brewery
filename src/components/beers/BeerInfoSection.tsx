@@ -57,10 +57,10 @@ export default function BeerInfoSection({ beer }: { beer: Beer }) {
               PROFIL
             </p>
             <h2 data-anim="a" className="mt-4 text-balance text-4xl font-semibold tracking-[-0.03em] md:text-5xl">
-              Što je unutra, kako se osjeti.
+              What makes {beer.title} special?
             </h2>
             <p data-anim="a" className="mt-5 max-w-prose text-base leading-relaxed text-white/70 md:text-lg">
-              Bez prenemaganja: aromatika, ukus i završetak — jasno i precizno.
+              Taste that makes the {beer.title } unique.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-2">
@@ -84,7 +84,7 @@ export default function BeerInfoSection({ beer }: { beer: Beer }) {
 
             <div className="mt-6 grid gap-6 md:grid-cols-2">
               <div data-anim="item" className="border border-white/10 bg-black/30 px-5 py-4">
-                <div className="text-xs tracking-[0.22em] text-white/45">NAPOMENE</div>
+                <div className="text-xs tracking-[0.22em] text-white/45">NOTES</div>
                 <ul className="mt-3 space-y-2 text-sm text-white/70">
                   {beer.notes.map((n) => (
                     <li key={n} className="flex gap-3">
@@ -96,7 +96,7 @@ export default function BeerInfoSection({ beer }: { beer: Beer }) {
               </div>
 
               <div data-anim="item" className="border border-white/10 bg-black/30 px-5 py-4">
-                <div className="text-xs tracking-[0.22em] text-white/45">UZ HRANU</div>
+                <div className="text-xs tracking-[0.22em] text-white/45">GOES WITH</div>
                 <ul className="mt-3 space-y-2 text-sm text-white/70">
                   {beer.pairing.map((n) => (
                     <li key={n} className="flex gap-3">
@@ -109,7 +109,7 @@ export default function BeerInfoSection({ beer }: { beer: Beer }) {
             </div>
 
             <p data-anim="item" className="mt-5 text-xs text-white/45">
-              * Podaci su okvirni — finalne vrijednosti upiši kad zaključaš recepturu / batch.
+              * data is approximate and may vary between batches. check the label for exact values.
             </p>
           </div>
         </div>
