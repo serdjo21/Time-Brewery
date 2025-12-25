@@ -24,7 +24,7 @@ export default function IdentitySection({
   title = "We brew for the bold.",
   copy = "Slovenian number one craft brewery, made for those who dare to be different. Our beers are crafted with passion, precision, and a touch of rebellion.",
   points = ["quality in taste", "Ingredients of choice", "Beer with character"],
-  ctaHref = "/pivara",
+  ctaHref = "/pivovarna",
   ctaLabel = "Visit our brewery",
   imageSrc,
   imageAlt = "Pivara",

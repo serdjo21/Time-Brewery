@@ -142,108 +142,26 @@ export default function Header() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {/* PIVA dropdown */}
-            <div className="relative" data-dd>
-              <button
-                onClick={() => {
-                  setOpenBeers((v) => !v);
-                  setOpenTap(false);
-                }}
-                className="group flex items-center gap-2 text-sm text-white/75 hover:text-white transition"
-                aria-haspopup="menu"
-                aria-expanded={openBeers}
-              >
-                Piva
-                <span className="text-white/55 group-hover:text-white transition">▾</span>
-                <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-white/80 transition-transform duration-300 group-hover:scale-x-100" />
-              </button>
+<nav className="hidden md:flex items-center gap-8">
+  {[
+    { label: "Piva", href: "/piva" },
+    { label: "Pivovarna", href: "/pivovarna" },
+    { label: "Pivnica", href: "/pivnica" },
+    { label: "O nama", href: "/o-nama" },
+    { label: "Kontakt", href: "/kontakt" },
+  ].map((item) => (
+    <Link
+      key={item.href}
+      href={item.href}
+      className="group relative text-sm text-white/75 hover:text-white transition"
+      onClick={closeAll}
+    >
+      {item.label}
+      <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-white/80 transition-transform duration-300 group-hover:scale-x-100" />
+    </Link>
+  ))}
+</nav>
 
-              {openBeers && (
-                <div className="absolute left-0 mt-3 w-[320px] overflow-hidden rounded-md border border-white/10 bg-black shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
-                  <div className="p-2">
-                    {beers.map((b) => (
-                      <Link
-                        key={b.href}
-                        href={b.href}
-                        onClick={closeAll}
-                        className="group flex items-center justify-between rounded-md px-3 py-2 hover:bg-white/5 transition"
-                      >
-                        <div>
-                          <div className="text-sm font-semibold text-white/85 group-hover:text-white transition">
-                            {b.label}
-                          </div>
-                          {b.desc ? (
-                            <div className="text-xs text-white/50">{b.desc}</div>
-                          ) : null}
-                        </div>
-                        <span className="text-white/45 group-hover:text-white/80 transition">✓</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* PIVNICA dropdown */}
-            <div className="relative" data-dd>
-              <button
-                onClick={() => {
-                  setOpenTap((v) => !v);
-                  setOpenBeers(false);
-                }}
-                className="group flex items-center gap-2 text-sm text-white/75 hover:text-white transition"
-                aria-haspopup="menu"
-                aria-expanded={openTap}
-              >
-                Pivnica
-                <span className="text-white/55 group-hover:text-white transition">▾</span>
-                <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-white/80 transition-transform duration-300 group-hover:scale-x-100" />
-              </button>
-
-              {openTap && (
-                <div className="absolute left-0 mt-3 w-[340px] overflow-hidden rounded-md border border-white/10 bg-black shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
-                  <div className="p-2">
-                    {taprooms.map((t) => (
-                      <Link
-                        key={t.href}
-                        href={t.href}
-                        onClick={closeAll}
-                        className="group flex items-center justify-between rounded-md px-3 py-2 hover:bg-white/5 transition"
-                      >
-                        <div>
-                          <div className="text-sm font-semibold text-white/85 group-hover:text-white transition">
-                            {t.label}
-                          </div>
-                          {t.desc ? (
-                            <div className="text-xs text-white/50">{t.desc}</div>
-                          ) : null}
-                        </div>
-                        <span className="text-white/45 group-hover:text-white/80 transition">✓</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* simple links */}
-            <Link
-              href="/o-nama"
-              className="group relative text-sm text-white/75 hover:text-white transition"
-            >
-              O nama
-              <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-white/80 transition-transform duration-300 group-hover:scale-x-100" />
-            </Link>
-
-            <Link
-              href="/kontakt"
-              className="group relative text-sm text-white/75 hover:text-white transition"
-            >
-              Kontakt
-              <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-white/80 transition-transform duration-300 group-hover:scale-x-100" />
-            </Link>
-          </nav>
 
           {/* Right side: desktop CTAs OR mobile burger */}
           <div className="flex items-center gap-3">
@@ -313,51 +231,28 @@ export default function Header() {
 
           <div className="mt-10 grid gap-10 lg:grid-cols-12">
             {/* Left column */}
-            <div className="lg:col-span-6 space-y-8">
-              <div className="m-item">
-                <div className="text-xs tracking-[0.26em] text-white/50">PIVA</div>
-                <div className="mt-3 space-y-2">
-                  {beers.map((b) => (
-                    <Link
-                      key={b.href}
-                      href={b.href}
-                      onClick={closeAll}
-                      className="group flex items-center justify-between rounded-md border border-white/10 bg-white/0 px-4 py-3 hover:bg-white/5 transition"
-                    >
-                      <div>
-                        <div className="text-lg font-semibold text-white/85 group-hover:text-white transition">
-                          {b.label}
-                        </div>
-                        {b.desc ? <div className="text-sm text-white/45">{b.desc}</div> : null}
-                      </div>
-                      <span className="text-white/40 group-hover:text-white/80 transition">→</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
+            <div className="m-item space-y-2">
+  {[
+    { label: "Piva", href: "/piva" },
+    { label: "Pivovarna", href: "/pivovarna" },
+    { label: "Pivnica", href: "/pivnica" },
+    { label: "O nama", href: "/o-nama" },
+    { label: "Kontakt", href: "/kontakt" },
+  ].map((item) => (
+    <Link
+      key={item.href}
+      href={item.href}
+      onClick={closeAll}
+      className="group flex items-center justify-between rounded-md border border-white/10 px-4 py-4 hover:bg-white/5 transition"
+    >
+      <div className="text-lg font-semibold text-white/85 group-hover:text-white transition">
+        {item.label}
+      </div>
+      <span className="text-white/40 group-hover:text-white/80 transition">→</span>
+    </Link>
+  ))}
+</div>
 
-              <div className="m-item">
-                <div className="text-xs tracking-[0.26em] text-white/50">PIVNICA</div>
-                <div className="mt-3 space-y-2">
-                  {taprooms.map((t) => (
-                    <Link
-                      key={t.href}
-                      href={t.href}
-                      onClick={closeAll}
-                      className="group flex items-center justify-between rounded-md border border-white/10 px-4 py-3 hover:bg-white/5 transition"
-                    >
-                      <div>
-                        <div className="text-lg font-semibold text-white/85 group-hover:text-white transition">
-                          {t.label}
-                        </div>
-                        {t.desc ? <div className="text-sm text-white/45">{t.desc}</div> : null}
-                      </div>
-                      <span className="text-white/40 group-hover:text-white/80 transition">→</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
 
             {/* Right column */}
             <div className="lg:col-span-6 space-y-4">
